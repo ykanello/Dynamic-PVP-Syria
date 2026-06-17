@@ -63,6 +63,7 @@ Coalitions expand only where they can support operations
 Both coalitions have a finite pool of available aircraft.
 
 Aircraft availability is based on the number of squadron members who own each module, not only on who is expected to fly on a given Sunday.
+The numbers can be taken from the MyModules discord channel
 
 Example starting inventory concept:
 
@@ -547,6 +548,6 @@ TBD.
 
 ## Credits
 
-Mission concept and design: squadron planning discussion.
+Mission concept and design: Lock-On Greece
 
 Built for DCS World using DML by cf/x.

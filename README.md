@@ -1,5 +1,106 @@
 # Syria PvP Persistent Campaign Mission
 
+## Why a new mission?
+Because it is trying to solve the following problems:
+Yes. This design solves these problems:
+
+* **Infinite-aircraft mindset**
+  Limited airframes make aircraft preservation important. Players must RTB instead of treating jets as disposable missiles with cockpits.
+
+* **Infinite-weapons feeling**
+  No constant weapon warehouse refill. Aircraft weapons become scarce and replenished slowly, probably weekly.
+
+* **Fuel being meaningless**
+  Refineries and fuel stock become strategic assets. Fuel supports flying, airfield operation, and airframe replacement.
+
+* **Static front-line boredom**
+  Large POI zones create natural campaign objectives in the middle of the map.
+
+* **Whole-map chaos**
+  Red and Blue start in limited areas, with a central contested belt. The fight has shape.
+
+* **Too many tiny objectives**
+  Fewer, larger zones reduce noise and make each objective worth planning around.
+
+* **Single truck captures an entire refinery nonsense**
+  High `numCap` and `numKeep` values force proper ground commitment.
+
+* **Easy ownership flipping**
+  `easyContest = false` makes captured POIs harder to neutralize or steal back casually.
+
+* **Air-only gameplay dominance**
+  Ground commanders, convoys, armor, IFVs, SHORAD, and helicopters all matter.
+
+* **Ground commanders having no real job**
+  They assemble produced units, reinforce POIs, move convoys, protect logistics, and support captures.
+
+* **Factories all producing generic stuff**
+  Specialized factories make specific places strategically valuable: tank factory, IFV factory, SHORAD factory, radar factory, etc.
+
+* **No reason to fight over specific areas**
+  Each POI gives a specific benefit. Teams will fight over what they need, not just whatever is nearby.
+
+* **Airfields being captured just for map painting**
+  Airfields are consumers. They are useful only if supplied and protected.
+
+* **Forward bases becoming magical self-sustaining islands**
+  A captured airfield without fuel, aircraft, and logistics is a liability, not a win button.
+
+* **Home-base rush cheese**
+  Home bases are heavily defended and strategically important, but not easy capture targets.
+
+* **Parked aircraft being irrelevant scenery**
+  `StopGap` + `SittingDucks` makes parked aircraft real targets. Ramp strikes can reduce enemy airpower.
+
+* **No consequence for bad pilot decisions**
+  Losing aircraft affects the whole coalition inventory.
+
+* **No recovery path after aircraft losses**
+  Fuel-for-airframes allows recovery, but only through strategic fuel surplus and delayed delivery.
+
+* **Instant replacement arcade behavior**
+  Purchased aircraft arrive later, not instantly.
+
+* **Refineries being decorative map objects**
+  They become fuel-production nodes and indirectly airpower-recovery nodes.
+
+* **Recon being optional fluff**
+  Recon Mode makes helicopters, scouts, and recon aircraft valuable for finding convoys, defenses, and weak POIs.
+
+* **Helicopters having no strategic role**
+  Chinooks, Hueys, Kiowas, etc. become useful for capture support, troop movement, recon, and logistics.
+
+* **SHORAD and radar assets appearing magically**
+  They are produced slowly by specific factories, making air-defense buildup deliberate.
+
+* **Too much message spam**
+  Live messages stay minimal. Deeper status can be queried via F10.
+
+* **Overbuilding with custom static objects**
+  Existing Syria map assets can be used. DML zones provide the game logic.
+
+* **Mission becoming script soup too early**
+  DML handles ownership, factories, recon, parked aircraft, and messaging. Only the fuel-for-airframes mechanic likely needs a small custom script.
+
+* **Lack of campaign economy**
+  The design creates separate economies: fuel, airframes, ground vehicles, and strategic factories.
+
+* **Lack of strategic choice**
+  Teams must decide whether to spend fuel on flying, save fuel for aircraft replacement, attack refineries, defend factories, or push for airfields.
+
+* **PvP becoming just CAP vs CAP**
+  CAP still matters, but now it supports actual strategic goals: protecting convoys, enabling captures, defending refineries, and stopping strikes.
+
+* **Small squadron spread too thin**
+  Fewer large objectives focus combat into understandable areas.
+
+* **Mission progress feeling abstract**
+  Progress is visible: captured POIs produce resources, airfields become usable, aircraft inventories shrink or recover.
+
+* **Lack of operational identity**
+  The mission becomes a combined-arms logistics war, not just random sorties on a large map.
+
+
 A persistent multiplayer PvP mission for **DCS World** on the **Syria** map.
 
 The mission is designed as an operational campaign, not a simple front-line brawl. Red and Blue begin with limited but well-equipped home areas. Between them sits a contested belt of major economic and military points of interest: refineries, ports, vehicle factories, radar production sites, armored depots, SHORAD depots, and forward airfields.
